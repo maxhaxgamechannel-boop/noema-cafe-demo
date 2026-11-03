@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="de" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<!-- DEMO-HINWEIS: Entwurf soll nicht in Suchmaschinen auftauchen. Erst nach Freigabe entfernen. -->
+<meta name="robots" content="noindex, nofollow">
+<title>DEMO-Entwurf · noema. – Café, Brunch, Bar in Cottbus</title>
+<meta name="description" content="Unverbindlicher Website-Entwurf (DEMO) für NOEMA – Café, Brunch, Bar am Gerichtsplatz in Cottbus. Keine offizielle Website des Betriebs.">
+<meta name="theme-color" content="#f1eadf">
+<meta name="color-scheme" content="light">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:site_name" content="NOEMA · DEMO-Entwurf">
+<meta property="og:title" content="DEMO-Entwurf · noema. – Café, Brunch, Bar in Cottbus">
+<meta property="og:description" content="Unverbindlicher Website-Entwurf (DEMO) für NOEMA, Gerichtsplatz 1, Cottbus. Keine offizielle Website.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DEMO-Entwurf · noema. – Cottbus">
+<meta name="twitter:description" content="Unverbindlicher Website-Entwurf (DEMO) für NOEMA, Cottbus. Keine offizielle Website.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/fraunces-latin-wght-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/app.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Zum Inhalt springen</a>
+
+<!-- Dekorative Hintergrund-Formen: bewegen sich beim Scrollen (js/app.js, data-speed / data-rot) -->
+<div class="deco" aria-hidden="true">
+  <span class="blob blob-a" data-speed="0.18" data-rot="0.02"></span>
+  <span class="blob blob-b" data-speed="-0.12" data-rot="-0.03"></span>
+  <span class="ring ring-a" data-speed="0.32" data-rot="0.08"></span>
+  <span class="ring ring-b" data-speed="-0.22" data-rot="-0.06"></span>
+  <svg class="leaf leaf-a" data-speed="0.45" data-rot="0.12" viewBox="0 0 40 60"><path d="M20 2C34 16 36 40 20 58C4 40 6 16 20 2z"/><path class="vein" d="M20 8V54"/></svg>
+  <svg class="leaf leaf-b" data-speed="0.28" data-rot="-0.1" viewBox="0 0 40 60"><path d="M20 2C34 16 36 40 20 58C4 40 6 16 20 2z"/><path class="vein" d="M20 8V54"/></svg>
+  <svg class="leaf leaf-c" data-speed="-0.3" data-rot="0.09" viewBox="0 0 40 60"><path d="M20 2C34 16 36 40 20 58C4 40 6 16 20 2z"/><path class="vein" d="M20 8V54"/></svg>
+  <span class="spark spark-a" data-speed="0.6"></span>
+  <span class="spark spark-b" data-speed="0.4"></span>
+  <span class="spark spark-c" data-speed="-0.35"></span>
+</div>
+
+<header class="top">
+  <!-- DEMO-HINWEIS: Diese Zeile vor einer echten Veröffentlichung entfernen. -->
+  <p class="demo-hinweis" role="note">
+    <span class="demo-tag">DEMO</span>
+    Unverbindlicher Website-Entwurf für NOEMA · keine offizielle Website
+  </p>
+
+  <div class="wrap top-row">
+    <a class="logo" href="#start" aria-label="noema – zum Seitenanfang">noema<span>.</span></a>
+
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="nav">
+      <span class="burger-lbl">Menü</span><span class="burger-icon" aria-hidden="true"></span>
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="#konzept">Konzept</a></li>
+        <li><a href="#karte">Speisekarte</a></li>
+        <li><a href="#infos">Öffnungszeiten</a></li>
+        <li><a href="#anfahrt">Anfahrt</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- Fortschrittsbalken: zeigt, wie weit gescrollt wurde -->
+  <span class="progress" id="progress" aria-hidden="true"></span>
+</header>
+
+<main id="main">
+
+  <!-- ===== 1. Einstieg ===== -->
+  <section class="hero" id="start" aria-labelledby="hero-title">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <p class="kicker anim-in" data-d="0"><span class="chip">Café</span><span class="chip">Brunch</span><span class="chip">Bar</span><span class="chip chip-dark">Cottbus</span></p>
+
+        <!-- Name wird beim Laden „geschrieben“ (Kontur zeichnet sich, dann füllt sich die Schrift).
+             Screenreader lesen den sr-only-Text; ohne JS ist der Name sofort sichtbar. -->
+        <h1 id="hero-title" class="hero-title">
+          <span class="sr-only">noema.</span>
+          <svg class="script" id="script" viewBox="0 0 620 230" aria-hidden="true">
+            <g id="script-g">
+              <text x="6" y="168">
+                <tspan>n</tspan><tspan>o</tspan><tspan>e</tspan><tspan>m</tspan><tspan>a</tspan><tspan class="dot">.</tspan>
+              </text>
+              <path class="swash" d="M14 204C120 186 250 214 380 196S540 186 600 200"/>
+            </g>
+          </svg>
+        </h1>
+
+        <p class="lead anim-in" data-d="3">Ein neues Café am Gerichtsplatz – gesundheitsbewusst und modern, mit <em>Matcha</em>, Trend-Getränken und Brunch.</p>
+
+        <!-- Eröffnungsdatum: nur aus Neueröffnungs-Verzeichnissen („voraussichtlich“). Vom Betrieb bestätigen lassen. -->
+        <p class="opening anim-in" data-d="4">
+          <span class="opening-dot" aria-hidden="true"></span>
+          Eröffnung voraussichtlich am Freitag, 6.&nbsp;November&nbsp;2026
+          <span class="todo">vorläufig</span>
+        </p>
+
+        <div class="cta anim-in" data-d="5">
+          <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&amp;query=Noema+Gerichtsplatz+1+03046+Cottbus" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+            Route in Google Maps<span class="sr-only"> (öffnet in neuem Tab)</span>
+          </a>
+          <a class="btn btn-line" href="#konzept">Zum Konzept <span class="arrow" aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+
+      <!-- PLATZHALTER-GRAFIK (kein Foto): abstrakte Kreise und Blätter.
+           Hier später ein autorisiertes Foto von NOEMA einsetzen, z. B. <img src="img/cafe.webp" alt="…">. -->
+      <div class="hero-art anim-in" data-d="2" aria-hidden="true">
+        <span class="art-sun" data-speed="-0.08"></span>
+        <span class="art-matcha" data-speed="0.06"></span>
+        <span class="art-ring"></span>
+        <svg class="art-leaf art-leaf-1" viewBox="0 0 40 60"><path d="M20 2C34 16 36 40 20 58C4 40 6 16 20 2z"/><path class="vein" d="M20 8V54"/></svg>
+        <svg class="art-leaf art-leaf-2" viewBox="0 0 40 60"><path d="M20 2C34 16 36 40 20 58C4 40 6 16 20 2z"/><path class="vein" d="M20 8V54"/></svg>
+        <span class="art-dot" data-speed="0.1"></span>
+        <span class="ph-label">Platz für Foto</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Laufband: verschiebt sich beim Scrollen -->
+  <div class="band-wrap" aria-hidden="true">
+    <div class="band">
+      <p class="band-track" id="band">Matcha ✦ Kaffee ✦ Brunch ✦ Bar ✦ Healthy Food ✦ Kaffeehaus-Events ✦ Matcha ✦ Kaffee ✦ Brunch ✦ Bar ✦ Healthy Food ✦ Kaffeehaus-Events ✦ Matcha ✦ Kaffee ✦ Brunch ✦ Bar ✦ Healthy Food ✦ Kaffeehaus-Events ✦</p>
+    </div>
+  </div>
+
+  <!-- ===== 2. Konzept ===== -->
+  <section class="section" id="konzept" aria-labelledby="konzept-title">
+    <div class="wrap">
+      <p class="kicker-line reveal">Konzept</p>
+      <h2 id="konzept-title" class="reveal">Healthy, modern und <em>mitten in der Stadt</em></h2>
+      <p class="intro reveal">noema bringt ein neues Gastronomie-Konzept in die Cottbuser Innenstadt: Café, Matcha und Trend-Getränke, Fancy &amp; Healthy Food und Kaffeehaus-Events. Ein Ort, der modern und „instagrammable“ sein soll.</p>
+
+      <ul class="tiles">
+        <li class="tile tile-matcha reveal">
+          <svg class="tile-ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 20h28v6a14 14 0 0 1-28 0z"/><path d="M36 22h3a5 5 0 0 1 0 10h-4"/><path d="M16 8c-2 3 2 5 0 8M24 8c-2 3 2 5 0 8"/></svg>
+          <h3>Matcha &amp; Trend-Getränke</h3>
+          <p>Matcha, Trend-Getränke und Kaffee.</p>
+        </li>
+        <li class="tile tile-peach reveal">
+          <svg class="tile-ico" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="26" r="14"/><circle cx="24" cy="26" r="7"/><path d="M6 10v10M10 10v10M8 20v20M42 10c-4 2-4 12 0 14v16"/></svg>
+          <h3>Brunch</h3>
+          <p>Café, Brunch und Bar unter einem Dach.</p>
+        </li>
+        <li class="tile tile-paper reveal">
+          <svg class="tile-ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 6c12 8 14 24 0 36C10 30 12 14 24 6z"/><path d="M24 12v28"/></svg>
+          <h3>Healthy Food</h3>
+          <p>Fancy und healthy – gesundheitsbewusstes Essen.</p>
+        </li>
+        <li class="tile tile-dark reveal">
+          <svg class="tile-ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M18 36V10l20-4v26"/><circle cx="13" cy="36" r="5"/><circle cx="33" cy="32" r="5"/></svg>
+          <h3>Kaffeehaus-Events</h3>
+          <p>Termine <span class="todo">noch zu ergänzen</span></p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 3. Speisekarte (noch nicht veröffentlicht) ===== -->
+  <section class="section" id="karte" aria-labelledby="karte-title">
+    <div class="wrap narrow">
+      <p class="kicker-line reveal">Speisekarte</p>
+      <h2 id="karte-title" class="reveal">Speisen <em>&amp;</em> Getränke</h2>
+      <div class="todo-card reveal">
+        <p class="todo-big">Speisekarte, Getränke und Preise <span class="todo">noch zu ergänzen</span></p>
+        <p class="muted">Hier kann die Karte als Text eingebunden werden – gut lesbar auf dem Handy, auch ohne Social-Media-Account.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 4. Öffnungszeiten & Kontakt ===== -->
+  <section class="section" id="infos" aria-labelledby="infos-title">
+    <div class="wrap">
+      <p class="kicker-line reveal">Öffnungszeiten &amp; Kontakt</p>
+      <h2 id="infos-title" class="reveal">Gut <em>zu wissen</em></h2>
+      <div class="cards">
+        <div class="card reveal">
+          <h3>Öffnungszeiten</h3>
+          <p><span class="todo">noch zu ergänzen</span></p>
+        </div>
+        <div class="card reveal">
+          <h3>Telefon &amp; E-Mail</h3>
+          <p><span class="todo">noch zu ergänzen</span></p>
+        </div>
+        <div class="card reveal">
+          <h3>Social Media</h3>
+          <p><span class="todo">noch zu ergänzen</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. Anfahrt ===== -->
+  <section class="section section-dark" id="anfahrt" aria-labelledby="anfahrt-title">
+    <span class="glow" data-speed="-0.15" aria-hidden="true"></span>
+    <div class="wrap split">
+      <div>
+        <p class="kicker-line reveal">Anfahrt</p>
+        <h2 id="anfahrt-title" class="reveal">Am <em>Gerichtsplatz</em></h2>
+        <address class="reveal">
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Noema+Gerichtsplatz+1+03046+Cottbus" target="_blank" rel="noopener noreferrer">
+            NOEMA<br>Gerichtsplatz 1<br>03046 Cottbus<span class="sr-only"> (Google Maps, öffnet in neuem Tab)</span>
+          </a>
+        </address>
+      </div>
+      <div class="reveal">
+        <a class="btn btn-matcha" href="https://www.google.com/maps/search/?api=1&amp;query=Noema+Gerichtsplatz+1+03046+Cottbus" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5a7 7 0 0 1 14 0C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          Route in Google Maps<span class="sr-only"> (öffnet in neuem Tab)</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p class="logo logo-foot">noema<span>.</span></p>
+    <p>Gerichtsplatz 1 · 03046 Cottbus</p>
+    <p class="muted">Impressum und Datenschutzerklärung <span class="todo todo-light">vor Veröffentlichung zu ergänzen</span></p>
+    <!-- DEMO-HINWEIS: vor einer echten Veröffentlichung entfernen. -->
+    <p class="foot-demo">Unverbindlicher Website-Entwurf für NOEMA · DEMO. Keine offizielle Website des Betriebs; Angaben ohne Gewähr.</p>
+    <p class="foot-fonts">Schriften: Fraunces und DM Sans (SIL Open Font License).</p>
+  </div>
+</footer>
+</body>
+</html>
